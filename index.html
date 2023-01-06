@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pacman</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="init()" onkeyup="movePacman(event)">
+
+    <section class="app-container">
+        <div class="header">
+            <h2>Score: <span>0</span></h2>
+            <div class="nav header">
+            <p class="victorius">Victorius!</p>
+            <button class="play-again" title="Game on!" onclick="init()">Play again</button>
+            </div>
+        </div>
+
+        <section class="game-container">
+            <div class="board-container"></div>
+
+            <div class="btn-container disable-dbl-tap-zoom">
+                <img class="btn btn1" src="img/up.svg.png" alt="up" onclick="movePacman('up')">
+                <img class="btn btn4" src="img/left.svg.png" alt="left" onclick="movePacman('left')">
+                <img class="btn btn3" src="img/down.svg.png" alt="down" onclick="movePacman('down')">
+                <img class="btn btn2" src="img/right.svg.png" alt="right" onclick="movePacman('right')">
+            </div>
+        </section>
+
+        <script src="js/utils.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/pacman.js"></script>
+        <script src="js/ghost.js"></script>
+    </section>
+</body>
+
+</html>

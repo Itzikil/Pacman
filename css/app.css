@@ -1,0 +1,151 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.4em;
+  overflow: visible;
+}
+
+.formLine {
+  margin: 10px;
+  padding: 10px;
+  background-color: cornflowerblue;
+}
+
+.play-again {
+  border-radius: 5px;
+  font-weight: bold;
+  padding-block: 5px;
+  padding-inline: 15px;
+  transform: scale(1);
+}
+
+.play-again:hover {
+  background-color: rgba(148, 179, 189, 0.753);
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.6s ease-in;
+}
+
+.victorius {
+  font-size: xx-large;
+  font-weight: 700;
+  color: rgb(22, 71, 207);
+  transition: 1s;
+}
+
+.hide {
+  display: none;
+}
+
+.ghost {
+  transition: 3s;
+  background-color: aqua;
+  border-radius: 20%;
+}
+
+.wall {
+  color: blue;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+
+}
+
+.floor {
+  color: blue;
+  font-size: xx-large;
+  transform: rotate(90deg);
+}
+
+.board-container {
+  min-width: 670px;
+  max-width: 876px;
+  max-height: 437px;
+}
+
+
+/* /////////// buttons ///////// */
+
+.btn {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 2px gray;
+  border-radius: 50%;
+  opacity: 30%;
+}
+
+.btn:hover {
+  box-shadow: none;
+  opacity: 70%;
+  width: 33px;
+  height: 33px;
+}
+
+.btn-container {
+  position: absolute;
+  left: 47%;
+  bottom: 12px;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-areas:
+    '. up .'
+    'left down right';
+  display: grid;
+  /* display: none; */
+}
+
+.btn1 {
+  grid-area: up;
+  margin-bottom: 1px;
+}
+
+.btn2 {
+  grid-area: right;
+}
+
+.btn3 {
+  grid-area: down;
+}
+
+.btn4 {
+  grid-area: left;
+}
+
+.game-container {
+  position: relative;
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
+@media (max-width:600px) {
+  .btn-container {
+    display: grid;
+  }
+}
